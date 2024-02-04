@@ -1,0 +1,88 @@
+/* Common Utilities */
+@mixin remove-after-before {
+  &::before,
+  &::after {
+    display: none;
+  }
+}
+
+/* Flex */
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-start {
+  display: flex;
+  align-items: start;
+}
+
+@mixin flex-end {
+  display: flex;
+  align-items: end;
+}
+
+@mixin flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin flex-no-wrap {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+@mixin flex-center-wrap {
+  @include flex-center;
+  flex-wrap: wrap;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-column-end {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+@mixin flex-column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+// Side margin auto
+@mixin auto-margin-side {
+  margin-left: auto;
+  margin-right: auto;
+}
+@mixin auto-margin-side-width ($width) {
+  width: $width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Text ellipse */
+@mixin line-elpsis($lines) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+}
+
+@mixin overlay {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

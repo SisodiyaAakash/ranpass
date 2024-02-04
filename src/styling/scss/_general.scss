@@ -1,0 +1,90 @@
+html, * {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $dark-grey;
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+
+  ol,
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  .container {
+    max-width: 1199px;
+    padding-left: 20px;
+    padding-right: 20px;
+    @include auto-margin-side;
+
+    @media screen and (max-width: 1199px) {
+      max-width: 901px;
+    }
+    @media screen and (max-width: 991px) {
+      max-width: 707px;
+    }
+    @media screen and (max-width: 767px) {
+      max-width: 503px;
+    }
+    @media screen and (max-width: 543px) {
+      max-width: 100%;
+    }
+  }
+}
+
+/* Custom Scrollbar */
+* {
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $todo-secondary;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba($todo-primary, 0.6);
+
+    &:hover {
+      background: rgba($todo-primary, 0.85);
+    }
+  }
+}
+
+/* Font weights */
+body {
+  .extra-light {
+    font-weight: $extra-light;
+  }
+
+  .light {
+    font-weight: $light;
+  }
+
+  .regular {
+    font-weight: $regular;
+  }
+
+  .medium {
+    font-weight: $medium;
+  }
+
+  .semi-bold {
+    font-weight: $semi-bold;
+  }
+
+  .bold {
+    font-weight: $bold;
+  }
+}

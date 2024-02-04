@@ -1,0 +1,223 @@
+/* Fonts */
+/* Primary Fonts */
+@font-face {
+  font-family: $todo-primary-fonts;
+  src: url("../assets/fonts/Questrial-Regular.woff2") format("woff2");
+  font-weight: $regular;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Secondary Fonts */
+@font-face {
+  font-family: $todo-secondary-fonts;
+  src: url("../assets/fonts/Inter-Regular.woff2") format("woff2");
+  font-weight: $regular;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: $todo-secondary-fonts;
+  src: url("../assets/fonts/Inter-Medium.woff2") format("woff2");
+  font-weight: $medium;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: $todo-secondary-fonts;
+  src: url("../assets/fonts/Inter-SemiBold.woff2") format("woff2");
+  font-weight: $semi-bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Typography Styling */
+body {
+  font-family: $todo-secondary-fonts;
+  font-weight: $regular;
+
+  font-size: 16px;
+  line-height: 24px;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $todo-primary-fonts;
+    font-weight: $regular;
+    color: $white;
+
+    * {
+      font-family: inherit;
+      font-weight: inherit;
+    }
+  }
+
+  p,
+  ul li {
+    color: $white;
+  }
+
+  p,
+  ul li,
+  input,
+  textarea,
+  select option {
+    font-family: $todo-secondary-fonts;
+    font-weight: $regular;
+  }
+
+  button {
+    font-family: $todo-secondary-fonts;
+    text-decoration: none;
+    font-weight: $semi-bold;
+    outline: none;
+
+    * {
+      font-family: inherit;
+      font-weight: inherit;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    padding: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  a,
+  p,
+  button {
+    margin: 0;
+    font-style: normal;
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  h1 {
+    font-size: 56px;
+    line-height: 63px;
+    letter-spacing: 0.56px;
+
+    @media screen and (max-width: 767px) {
+      font-size: 48px;
+      line-height: 54px;
+      letter-spacing: 0.48px;
+    }
+  }
+
+  h2 {
+    font-size: 48px;
+    line-height: 54px;
+    letter-spacing: 0.48px;
+
+    @media screen and (max-width: 767px) {
+      font-size: 35px;
+      line-height: 40px;
+      letter-spacing: 0.35px;
+    }
+  }
+
+  h3 {
+    font-size: 35px;
+    line-height: 40px;
+    letter-spacing: 0.35px;
+
+    @media screen and (max-width: 767px) {
+      font-size: 32px;
+      line-height: 36px;
+      letter-spacing: 0.32px;
+    }
+  }
+
+  h4 {
+    font-size: 32px;
+    line-height: 36px;
+    letter-spacing: 0.32px;
+
+    @media screen and (max-width: 767px) {
+      font-size: 24px;
+      line-height: 27px;
+      letter-spacing: 0.24px;
+    }
+  }
+
+  h5 {
+    font-size: 24px;
+    line-height: 27px;
+    letter-spacing: 0.24px;
+
+    @media screen and (max-width: 767px) {
+      // typography value for the heading 5 in small screen
+    }
+  }
+
+  h6 {
+    // typography value for the heading 6
+    // font-size: value;
+    // line-height: value;
+    @media screen and (max-width: 767px) {
+      // typography value for the heading 6 in small screen
+    }
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: $regular;
+    line-height: 24px;
+
+    @media screen and (max-width: 767px) {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  li {
+    font-size: 20px;
+    font-weight: $regular;
+    line-height: 24px;
+
+    @media screen and (max-width: 767px) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  input,
+  textarea,
+  select option {
+    font-size: 16px;
+    line-height: 18px;
+    font-family: $todo-secondary-fonts;
+    outline: none;
+
+    @media screen and (max-width: 543px) {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  button {
+    font-size: 20px;
+    line-height: 1;
+    text-align: center;
+  }
+}

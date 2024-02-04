@@ -1,0 +1,167 @@
+body {
+  #root {
+    min-height: 100vh;
+    @include flex-column;
+  }
+  .main-wrapper {
+    flex-grow: 1;
+    @include flex-center;
+
+    .ranpass-inner-wrapper {
+      @include flex-center-wrap;
+      row-gap: 50px;
+
+      .content-area {
+        width: 55%;
+
+        @media screen and (max-width: 767px) {
+          width: 100%;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+          max-width: 400px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          margin-bottom: 10px;
+        }
+
+        p {
+          margin-bottom: 35px;
+        }
+
+        .content-media {
+          width: calc(100% - 50px);
+          max-width: 350px;
+        }
+      }
+
+      .action-area {
+        width: 45%;
+        padding-left: 30px;
+
+        @media screen and (max-width: 767px) {
+          padding-left: 0;
+          width: 100%;
+        }
+
+        .result-section {
+          @include flex-center;
+          gap: 5px;
+          width: 500px;
+          max-width: 100%;
+          border: 1.5px solid rgba($white, 0.5);
+          padding: 8px;
+          border-radius: 100px;
+
+          input.result-field {
+            padding: 5px 15px;
+            flex-grow: 1;
+            background-color: transparent;
+            border: 0;
+            color: $white;
+            max-width: calc(100% - 45px); 
+          }
+
+          button {
+            transition: $transition;
+            background-color: transparent;
+            border: 0;
+            border-radius: 100px;
+            width: 40px;
+            height: 35px;
+            cursor: pointer;
+
+            &.active {
+              background-color: $blue;
+            }
+          }
+
+          &:hover {
+            button {
+              transition: $transition;
+              background-color: $blue;
+            }
+          }
+        }
+
+        p.copy-notification {
+          padding: 10px 12px;
+          margin-top: 10px;
+          border-radius: 50px;
+          background-color: $green;
+          text-align: center;
+          font-size: 14px;
+          line-height: 1;
+        }
+
+        .form-section {
+          @include flex-column;
+          margin-top: 35px;
+
+          .length-range {
+            @include flex-center;
+            column-gap: 10px;
+            margin-bottom: 30px;
+
+            input.range-field {
+              flex-grow: 1;
+              cursor: pointer;
+              accent-color: $blue;
+            }
+
+            span {
+              @extend p;
+            }
+          }
+
+          .parameters {
+            @include flex-column;
+            row-gap: 20px;
+
+            .field-group {
+              @include flex-center-wrap;
+              column-gap: 8px;
+              row-gap: 4px;
+              cursor: pointer;
+
+              input[type="checkbox"] {
+                // accent-color: $blue;
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                appearance: none;
+                background-color: rgba($white, 0.2);
+                transition: $transition;
+
+                &:hover {
+                  background-color: $dark-blue;
+                  transition: $transition;
+                }
+                &:checked {
+                  transition: $transition;
+                  background-color: $blue;
+                  background-image: url('../assets/media/checked-icon.svg');
+                  background-repeat: no-repeat;
+                  background-size: 18px;
+                  background-position: center;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+body {
+   footer.footer {
+      margin-top: auto;
+      padding: 25px 0;
+      
+      .footer-inner-wrap {
+         @include flex-center;
+         justify-content: center;
+         column-gap: 20px; 
+         row-gap: 15px;
+
+         .social-icon {
+            @include flex-center;
+
+            img {
+               width: auto;
+               height: 20px;
+            }
+         }
+      }
+   }
+}

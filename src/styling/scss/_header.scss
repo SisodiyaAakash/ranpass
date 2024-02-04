@@ -1,0 +1,29 @@
+body {
+  header.header {
+    background-color: $dark-grey;
+    padding: 20px 0;
+
+    position: sticky;
+    top: 0;
+
+    @media screen and (max-width: 767px) {
+      padding: 25px 0;
+    }
+
+    .header-inner-wrap {
+      @include flex-center;
+      justify-content: center;
+
+      p.logo {
+        font-size: 24px;
+        line-height: 1;
+        color: $white;
+
+        span {
+          color: $todo-primary;
+          font-weight: $semi-bold;
+        }
+      }
+    }
+  }
+}

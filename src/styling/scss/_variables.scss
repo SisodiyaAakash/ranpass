@@ -1,0 +1,35 @@
+/* Colours */
+$black: #000000;
+$white: #FFFFFF;
+$grey: #F5F5F5;
+$dark-grey: #111111;
+$blue: #4333FF;
+$dark-blue: #1200da;
+$red: #E94848;
+$green: #27AE60;
+$yellow: #c1981b;
+
+/* Font Weight */
+$extra-light: 200;
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+$extra-bold: 800;
+$black-weight: 900;
+
+/* Utilities */
+$transition: 350ms all ease;
+
+
+/* Starter Theme Variables */
+/* Theme colors */
+$todo-primary: $blue; 
+$todo-primary-dark: $dark-blue; 
+$todo-secondary: $grey;
+$todo-secondary-dark: $dark-grey;
+
+/* Fonts */
+$todo-primary-fonts: 'Questrial';
+$todo-secondary-fonts: 'Inter';
